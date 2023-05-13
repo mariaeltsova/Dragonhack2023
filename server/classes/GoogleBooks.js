@@ -12,7 +12,10 @@ module.exports = class GoogleBooks {
   }
 
   async getBooksByKeywords(keywords) {
-    const result = await gbooks.standard({}, { q: "banana", maxResults: 10 })
+    const result = await gbooks.standard(
+      {},
+      { q: keywords.join("+"), maxResults: 10 }
+    )
     console.log(result.items)
 
     return result
