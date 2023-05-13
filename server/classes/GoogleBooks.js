@@ -1,12 +1,15 @@
 const gbooks = require("@chewhx/google-books")
+const striptags = require('striptags');
 
 module.exports = class GoogleBooks {
   async getBooksBySubject(subject) {
     const result = await gbooks.standard(
       { subject: subject },
-      { maxResults: 10 }
-    )
-    console.log(result)
+      { maxResults: 10}, 
+      { printType: 'books' },
+      { filter: 'full' },
+      { stripHtml: true }
+    );
 
     return result
   }
