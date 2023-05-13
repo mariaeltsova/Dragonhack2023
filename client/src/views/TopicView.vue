@@ -27,8 +27,8 @@ import TextArea from "../components/TextArea.vue"
   ></select-menu>
   <br />
   <input-field
-    :label="'123'"
-    :placeholder="'vnosno polje'"
+    :label="''"
+    :placeholder="'Enter the topic'"
     :type="'password'"
   ></input-field>
 
