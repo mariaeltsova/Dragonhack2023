@@ -16,7 +16,8 @@ module.exports = class GoogleBooks {
       {},
       { q: keywords.join("+"), maxResults: 10 }
     )
-    console.log(result.items)
+    // console.log(result.items[0])
+    // console.log(result.items.map((el) => el.searchInfo?.textSnippet))
 
     return result
   }
