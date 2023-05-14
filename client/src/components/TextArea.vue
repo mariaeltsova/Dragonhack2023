@@ -68,6 +68,7 @@ export default {
 <style scoped>
 .markedText {
   background: red;
+  border-radius: 7px;
 }
 
 .box {

@@ -5,11 +5,17 @@ import TopBar from "./components/TopBar.vue"
 
 <template>
   <top-bar></top-bar>
-  <RouterView></RouterView>
+  <div class="lining">
+    <RouterView></RouterView>
+  </div>
 
   <toolbar></toolbar>
 
   <!--  -->
 </template>
 
-<style scoped></style>
+<style scoped>
+.lining {
+  margin: 5%;
+}
+</style>
