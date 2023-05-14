@@ -1,4 +1,6 @@
 def insert_word(form, lang):
+    import requests
+    import json
     model = "gpt-3.5-turbo"
     token = "JoK34dQJrN8UhTdMepDr2XauaUAV7A"
     lem = lemma(form, lang)
@@ -7,8 +9,8 @@ def insert_word(form, lang):
 2. Replace the word in these sentences with a gap.
 
 Return output in a json format:
-    "example1": ["typical use of the word "{lem}" in {lang} language; with a gap instead of the word", "the word form from the gap"]
-    "example2": ["another typical use of the word "{lem}" in {lang} language; with a gap instead of the word", "the word form from the gap"]
+    "example1": ["typical use of the word '{lem}'' in {lang} language; with a gap instead of the word", "the word form from the gap"]
+    "example2": ["another typical use of the word '{lem}'' in {lang} language; with a gap instead of the word", "the word form from the gap"]
     
 Example output for the word "школа" in Russian:
     "example1": ["Мои дети уже ходят в __.", "школу"]
@@ -24,4 +26,4 @@ Example output for the word "школа" in Russian:
     try:
         return json.loads(res)
     except:
-        return res
+        return 'Error'
