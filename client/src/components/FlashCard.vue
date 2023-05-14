@@ -16,13 +16,12 @@
     <br />
     <br />
     <div class="row">
-      <div class="col-1"></div>
       <div class="col-3">
-        <button type="button" class="btn btn-primary">&lt;</button>
+        <button type="button" class="btn btn-primary btn-circle">&lt;</button>
       </div>
       <div class="col"></div>
       <div class="col-3">
-        <button type="button" class="btn btn-primary">&gt;</button>
+        <button type="button" class="btn btn-primary btn-circle">&gt;</button>
       </div>
     </div>
     <br />
@@ -32,5 +31,9 @@
 <style>
 .btn-full {
   width: 100%;
+}
+.btn-circle {
+  border-radius: 50px;
+  padding: 1.5rem;
 }
 </style>
