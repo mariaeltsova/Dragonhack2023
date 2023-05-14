@@ -5,7 +5,6 @@ import TextArea from "../components/TextArea.vue"
 </script>
 
 <template>
-  <br />
   <select-menu
     :label="'Choose language'"
     :options="languages"
@@ -29,7 +28,7 @@ import TextArea from "../components/TextArea.vue"
   <input-field
     :label="''"
     :placeholder="'Enter the topic'"
-    :type="'password'"
+    :type="'input'"
   ></input-field>
 
   <br />
@@ -45,7 +44,7 @@ import TextArea from "../components/TextArea.vue"
   ></text-area>
 
   <br />
-  <button type="submit" class="btn btn-secondary float-end">Save words</button>
+  <button type="submit" class="btn btn-primary float-end">Save words</button>
 </template>
 
 <script>
