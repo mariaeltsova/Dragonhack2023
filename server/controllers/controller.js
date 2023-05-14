@@ -28,3 +28,15 @@ exports.getBook = async (req, res) => {
   //res.status(200).json({ message: "This is a book."});
 
 }
+
+exports.saveWords = async (req, res) => {
+  try {
+    console.log(req)
+    
+  }
+  catch(error) {
+    res.status(500).json(error);
+  }
+}
+
+
