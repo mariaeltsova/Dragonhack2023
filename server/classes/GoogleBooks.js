@@ -8,7 +8,6 @@ module.exports = class GoogleBooks {
       { maxResults: 10}, 
       { printType: 'books' },
       { filter: 'full' },
-      { stripHtml: true }
     );
 
     return result

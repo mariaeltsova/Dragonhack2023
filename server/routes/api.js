@@ -8,6 +8,6 @@ router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
 
-router.get('/books', controller.getBook);
+router.get('/getSnippets', controller.getBook);
 
 module.exports = router;

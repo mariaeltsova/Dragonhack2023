@@ -5,13 +5,13 @@ const gb = new GoogleBooks()
 
 exports.getBook = async (req, res) => {
   try{
-    let keyword = "mister"
-    const result = await gb.getBooksBySubject([keyword]);
+    let keyword = ["cockroach"]
+    const result = await gb.getBooksByKeywords(keyword);
 
     const filteredArray = result.items.filter(element => element.searchInfo.textSnippet.toLowerCase().includes(keyword));
     const strippedArray = filteredArray.map(element => striptags(element.searchInfo.textSnippet));
-
-    res.status(200).send(strippedArray[0]);
+    
+    res.status(200).send(strippedArray);
   }
   catch(error){
     res.status(500).json(error);
