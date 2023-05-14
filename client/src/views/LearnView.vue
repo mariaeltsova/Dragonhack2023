@@ -8,7 +8,7 @@ import FlashCard from "../components/FlashCard.vue"
   <br />
 
   <div class="container-fluid">
-    <div class="row" v-if="startTrue == 0">
+    <div class="row">
       <div class="col">
         <select-menu
           :label="'Select mode'"
@@ -30,7 +30,7 @@ import FlashCard from "../components/FlashCard.vue"
 
   <br />
   <br />
-  <flash-card v-if="startTrue == 1"></flash-card>
+  <flash-card v-if="startTrue != 0"></flash-card>
 </template>
 
 <script>
@@ -51,7 +51,7 @@ export default {
         this.startTrue = 1
       }
       if (game == 2) {
-        this.$router.push({ name: "complete" })
+        this.startTrue = 2
       }
     },
   },
