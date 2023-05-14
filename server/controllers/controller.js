@@ -2,12 +2,14 @@ const axios = require("axios");
 const GoogleBooks = require("../classes/GoogleBooks");
 const ChatGPT = require("../classes/ChatGPT");
 const striptags = require("striptags");
-const gb = new GoogleBooks('sl');
+const gb = new GoogleBooks();
 const gpt = new ChatGPT();
 
 exports.getBook = async (req, res) => {
   try{
-    let keyword = "cockroach"
+    if(!req.params.keyword)
+      res.status(401).send("No keyword");
+    keyword = req.params.keyword;
     const result = await gb.getBooksByKeywords(keyword);
 
     //const filteredArray = result.items.filter(element => element.searchInfo.textSnippet.toLowerCase().includes(keyword));
