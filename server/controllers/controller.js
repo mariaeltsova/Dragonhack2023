@@ -7,9 +7,12 @@ const gpt = new ChatGPT();
 
 exports.getBook = async (req, res) => {
   try{
-    if(!req.params.keyword)
+    if(!req.params.keyword){
       res.status(401).send("No keyword");
-    keyword = req.params.keyword;
+      return
+    }
+    const keyword = req.params.keyword;
+    console.log(keyword)
     const result = await gb.getBooksByKeywords(keyword);
 
     //const filteredArray = result.items.filter(element => element.searchInfo.textSnippet.toLowerCase().includes(keyword));
