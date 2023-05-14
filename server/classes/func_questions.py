@@ -2,7 +2,7 @@ def get_questions_sum(text, lang):
     import requests
     import json
     model = "gpt-3.5-turbo"
-    token = "JoK34dQJrN8UhTdMepDr2XauaUAV7A"
+    token = ***
     prompt = f"""
 Input text in {lang} language:
 "{text}"
