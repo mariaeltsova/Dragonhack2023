@@ -23,7 +23,7 @@
   --bs-gray-lighter: #f8f8f8;
   --bs-gray-lightest: #fcfcfc;
   --bs-gray-dark: #343a40;
-  --bs-gray-darker: #212529;
+  --bs-gray-darker: #eee;
   --bs-gray-darkest: #121416;
   --bs-primary-variant: var(--bs-deep-purple);
   --bs-secondary-variant: var(--bs-gray-dark);
