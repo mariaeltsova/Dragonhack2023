@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -6,6 +7,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --bs-white: #382161;
   --bs-blue: #a7d8de;
   --bs-indigo: #a7d8de;
   --bs-purple: #653780;
@@ -22,7 +24,7 @@
   --bs-gray-lighter: #f8f8f8;
   --bs-gray-lightest: #fcfcfc;
   --bs-gray-dark: #343a40;
-  --bs-gray-darker: #212529;
+  --bs-gray-darker: #eee;
   --bs-gray-darkest: #121416;
   --bs-primary-variant: var(--bs-deep-purple);
   --bs-secondary-variant: var(--bs-gray-dark);
@@ -38,6 +40,7 @@
   --bs-link-hover-color: var(--bs-primary-variant);
   --bs-code-color: var(--bs-pink);
   --bs-highlight-bg: var(--bs-gray-lightest);
+  --bs-body-font-family: "Poppins", sans-serif;
 }
 
 *,
@@ -2196,7 +2199,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #000;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2964,15 +2967,15 @@ fieldset:disabled .btn {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
+  --bs-btn-color: #382161;
+  --bs-btn-bg: #eee;
+  --bs-btn-border-color: #653780;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-hover-bg: #653780;
+  --bs-btn-hover-border-color: #653780;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-bg: #653780;
   --bs-btn-active-border-color: #0a53be;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;

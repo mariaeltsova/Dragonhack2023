@@ -67,7 +67,8 @@ export default {
 
 <style scoped>
 .markedText {
-  background: red;
+  color: #eee;
+  background: #653780;
   border-radius: 7px;
 }
 

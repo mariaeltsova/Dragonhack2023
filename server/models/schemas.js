@@ -53,3 +53,12 @@ function saveWordsToMongo(words, id) {
     new Word({word: word, translation: translation, definition: definition});
   }
 }
+
+/*const wordSchema = new mongoose.Schema({
+  id: { type: String, required: false },
+  sklon: { type: [String], required: true }
+}); */
+mongoose.model("User", userSchema, "Users");
+mongoose.model("Word", wordSchema, "Words");
+
+
