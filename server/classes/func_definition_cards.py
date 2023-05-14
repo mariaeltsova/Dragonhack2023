@@ -1,6 +1,6 @@
 def card_defin(lang, lemma, sentence):
     model = "gpt-4"
-    token = "JoK34dQJrN8UhTdMepDr2XauaUAV7A"
+    token = "***"
     prompt = f"""
 Get a definition of the meaning of the {lang} word "{lemma}" which is exemplified in the sentence "{sentence}".
 
