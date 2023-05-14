@@ -6,7 +6,7 @@
       v-model="input"
       class="form-control"
       :placeholder="placeholder"
-      @mousedown="$emit('input', input)"
+      @keydown="$emit('input', input)"
     />
   </div>
 </template>

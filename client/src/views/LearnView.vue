@@ -30,11 +30,16 @@ import FlashCard from "../components/FlashCard.vue"
 
   <br />
   <br />
-  <flash-card v-if="startTrue != 0"></flash-card>
+  <flash-card
+    v-if="startTrue != 0"
+    :keyword="keyword"
+    :solution="solution"
+  ></flash-card>
 </template>
 
 <script>
 import { modes } from "../util/modes"
+import axios from "axios"
 
 export default {
   data() {
@@ -42,6 +47,8 @@ export default {
       modes: modes,
       selectedMode: 0,
       startTrue: 0,
+      keyword: "",
+      solution: "",
     }
   },
   methods: {
@@ -53,6 +60,9 @@ export default {
       if (game == 2) {
         this.startTrue = 2
       }
+    },
+    async getCard() {
+      const result = axios.get("")
     },
   },
 }

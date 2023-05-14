@@ -12,8 +12,13 @@ exports.getBook = async (req, res) => {
       res.status(401).send("No keyword");
       return
     }
+    if(!req.query.language){
+      res.status(401).send("No language");
+      return
+    }
+    const language = req.query.language;
     const keyword = req.query.keyword;
-    const result = await gb.getBooksByKeywords(keyword);
+    const result = await gb.getBooksByKeywords(keyword, language);
 
     //const filteredArray = result.items.filter(element => element.searchInfo.textSnippet.toLowerCase().includes(keyword));
     const strippedArray = result.items.map(element => striptags(element.searchInfo.textSnippet));
@@ -27,7 +32,11 @@ exports.getBook = async (req, res) => {
 
 exports.generateText = async (req, res) => {
   try{
-    const result = await gpt.generateText("stopping", "english");
+    if(!req.query.word || !req.query.language){
+      res.status(401).send("Not enough parameters");
+      return
+    }
+    const result = await gpt.generateText(req.query.word, req.query.language);
     res.status(200).send(result);
   }
   catch(error){
@@ -37,7 +46,11 @@ exports.generateText = async (req, res) => {
 
 exports.card_transl_deepl = async (req, res) => {
   try{
-    const result = await gpt.card_transl_deepl('части', 'выдели части в предложении', 'russian');
+    if(!req.query.word || !req.query.sentence || !req.query.language){
+      res.status(401).send("Not enough parameters");
+      return
+    }
+    const result = await gpt.card_transl_deepl(req.query.word, req.query.sentence, req.query.language);
     res.status(200).send(result);
   }
   catch(error){

@@ -29,6 +29,7 @@ import TextArea from "../components/TextArea.vue"
     :label="''"
     :placeholder="'Enter the topic'"
     :type="'input'"
+    @input="(el) => getText(el)"
   ></input-field>
 
   <br />
@@ -62,14 +63,13 @@ export default {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       markedWords: [],
+      search: "",
     }
   },
   methods: {
-    async getText() {
-      const response = await axios.get(
-        "https://baconipsum.com/api/?type=meat-and-filler"
-      )
-      this.lorem = response.data[0]
+    async getText(el) {
+      this.lorem =
+        "Commodity Advances Through Banana Improvement Project Research, 1994-1998 G. J. Persley, Pamela George. Box 1 Key technology developments in banana biotechnology"
     },
   },
 }

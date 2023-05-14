@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-center">Keyword</h3>
+  <h3 class="text-center">{{ keyword }}</h3>
   <br />
   <button
     type="button"
@@ -12,10 +12,7 @@
   <div class="continer-fluid">
     <br />
     <div v-if="isAnswered">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum
-      dolore debitis ipsam animi sed obcaecati id quod perspiciatis adipisci?
-      Commodi asperiores fugiat ipsa alias voluptas, quisquam aperiam corporis
-      ullam.
+      {{ solution }}
     </div>
     <br />
     <br />
@@ -38,6 +35,10 @@ export default {
     return {
       isAnswered: false,
     }
+  },
+  param: {
+    keyword: String,
+    solution: String,
   },
 }
 </script>

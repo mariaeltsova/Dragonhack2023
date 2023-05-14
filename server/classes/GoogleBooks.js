@@ -11,10 +11,11 @@ module.exports = class GoogleBooks {
     return result
   }
 
-  async getBooksByKeywords(keyword) {
+  async getBooksByKeywords(keyword, language) {
+    console.log(language)
     const result = await gbooks.standard(
       {},
-      { q: keyword, maxResults: 10 }
+      { q: keyword, maxResults: 10, langRestrict: language}
     )
     // console.log(result.items[0])
     // console.log(result.items.map((el) => el.searchInfo?.textSnippet))
