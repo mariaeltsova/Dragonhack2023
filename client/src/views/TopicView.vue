@@ -68,10 +68,8 @@ export default {
   },
   methods: {
     async getText(el) {
-      const response = await axios.get(
-        `http://localhost:9000/api/getSnippets?keyword=${el}`
-      )
-      this.lorem = response.data[0]
+      this.lorem =
+        "Commodity Advances Through Banana Improvement Project Research, 1994-1998 G. J. Persley, Pamela George. Box 1 Key technology developments in banana biotechnology"
     },
   },
 }
