@@ -1,13 +1,17 @@
 <template>
   <h3 class="text-center">Keyword</h3>
   <br />
-  <button type="button" class="btn btn-primary btn-lg btn-block btn-full">
+  <button
+    type="button"
+    class="btn btn-primary btn-lg btn-block btn-full"
+    @click="isAnswered = true"
+  >
     Check me
   </button>
 
   <div class="continer-fluid">
     <br />
-    <div>
+    <div v-if="isAnswered">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum
       dolore debitis ipsam animi sed obcaecati id quod perspiciatis adipisci?
       Commodi asperiores fugiat ipsa alias voluptas, quisquam aperiam corporis
@@ -27,6 +31,16 @@
     <br />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isAnswered: false,
+    }
+  },
+}
+</script>
 
 <style>
 .btn-full {

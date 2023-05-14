@@ -7,7 +7,7 @@
     <a class="nav-link" href="#" @click="this.$router.push({ name: 'topic' })">
       <img src="../assets/document.png" class="profile" alt="" srcset="" />
     </a>
-    <a class="nav-link" href="#" @click="this.$router.push({ name: 'puzzle' })">
+    <a class="nav-link" href="#" @click="this.$router.push({ name: 'choose' })">
       <img src="../assets/puzzle.png" class="profile" alt="" srcset="" />
     </a>
     &nbsp;
