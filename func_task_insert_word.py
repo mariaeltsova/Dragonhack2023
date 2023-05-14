@@ -5,7 +5,7 @@ def lemma(word, lang):
 1. Get a normalized form of the word "{word}" in the {lang} language.
 
     Return output in a json format:
-    "lemma": [normalized form]
+    "lemma": "normalized form"
     ""
 """
     JSON={
