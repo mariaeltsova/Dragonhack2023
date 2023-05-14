@@ -1,6 +1,7 @@
 const axios = require("axios");
 const GoogleBooks = require("../classes/GoogleBooks");
 const ChatGPT = require("../classes/ChatGPT");
+const {saveWordsToMongo} = require('../models/schemas');
 const striptags = require("striptags");
 const gb = new GoogleBooks();
 const gpt = new ChatGPT();
@@ -46,8 +47,8 @@ exports.card_transl_deepl = async (req, res) => {
 
 exports.saveWords = async (req, res) => {
   try {
-    console.log(req)
-    
+    console.log(req.body)
+    await saveWordsToMongo(req.body.words, req.body.id, req.body.language)
   }
   catch(error) {
     res.status(500).json(error);

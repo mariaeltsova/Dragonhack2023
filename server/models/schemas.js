@@ -4,7 +4,8 @@ const wordSchema = new mongoose.Schema({
   id: { type: Number, required: false },
   word: { type: String, required: true},
   translation: { type: String, required: true},
-  definition: { type: String, required: true}
+  definition: { type: String, required: true},
+  language: {type: String, requred: true}
 });
 
 const userSchema = new mongoose.Schema({
@@ -44,21 +45,25 @@ async function getUserById(id) {
   }
 }
 
-function saveWordsToMongo(words, id) {
+async function saveWordsToMongo(words, id, language) {
+  console.log(language)
+  try {
   //retrieve user from mongo
-  const user = getUserById(id);
+  const user = await getUserById(id);
   for (const word of words) {
+    console.log(word)
+    res = await gpt.card_transl_deepl(word.word, word.context, language);
+    console.log(res)
     var translation = "chatgpt translation";
     var definition = "chatgpt definition";
     new Word({word: word, translation: translation, definition: definition});
   }
+} catch(error) {
+  console.error(error);
+    return null;
+}
 }
 
-/*const wordSchema = new mongoose.Schema({
-  id: { type: String, required: false },
-  sklon: { type: [String], required: true }
-}); */
-mongoose.model("User", userSchema, "Users");
-mongoose.model("Word", wordSchema, "Words");
+module.exports = saveWordsToMongo
 
 
