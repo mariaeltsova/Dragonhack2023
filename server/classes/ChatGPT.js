@@ -7,7 +7,9 @@ async function lemma(word, lang) {
     const prompt = `
     1. Get a normalized form of the word "${word}" in the ${lang} language.
     Return output in a valid json format:
-        {"lemma": "normalized form"}
+        {"lemma": "normalized form", "note": "any of your observations during normalization"}
+    Example output:
+        {"lemma": "rope", "note": "Rope is already normalized, does not require normalization"}
     `;
     const json = {
         'model': model,
