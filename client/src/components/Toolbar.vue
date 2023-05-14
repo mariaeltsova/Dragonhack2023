@@ -1,13 +1,13 @@
 <template>
   <nav class="navbar fixed-bottom navbar-light bg-light nav-style">
     &nbsp;
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="#" @click="this.$router.push({ name: 'learn' })">
       <img src="../assets/card.png" class="profile" alt="" srcset="" />
     </a>
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="#" @click="this.$router.push({ name: 'topic' })">
       <img src="../assets/document.png" class="profile" alt="" srcset="" />
     </a>
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="#" @click="this.$router.push({ name: 'puzzle' })">
       <img src="../assets/puzzle.png" class="profile" alt="" srcset="" />
     </a>
     &nbsp;
