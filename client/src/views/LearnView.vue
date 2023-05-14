@@ -12,7 +12,7 @@ import FlashCard from "../components/FlashCard.vue"
         <select-menu :label="'Select mode'" :options="modes"></select-menu>
       </div>
       <div class="col-3">
-        <button type="submit" class="btn btn-secondary">Begin</button>
+        <button type="submit" class="btn btn-primary">Begin</button>
       </div>
     </div>
   </div>
@@ -32,3 +32,4 @@ export default {
   },
 }
 </script>
+
