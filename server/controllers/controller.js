@@ -11,8 +11,13 @@ exports.getBook = async (req, res) => {
       res.status(401).send("No keyword");
       return
     }
+    if(!req.query.language){
+      res.status(401).send("No language");
+      return
+    }
+    const language = req.query.language;
     const keyword = req.query.keyword;
-    const result = await gb.getBooksByKeywords(keyword);
+    const result = await gb.getBooksByKeywords(keyword, language);
 
     //const filteredArray = result.items.filter(element => element.searchInfo.textSnippet.toLowerCase().includes(keyword));
     const strippedArray = result.items.map(element => striptags(element.searchInfo.textSnippet));
