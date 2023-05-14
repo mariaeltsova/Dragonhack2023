@@ -15,7 +15,7 @@ module.exports = class GoogleBooks {
     console.log(language)
     const result = await gbooks.standard(
       {},
-      { q: keyword, maxResults: 10, }//langRestrict: language}
+      { q: keyword, maxResults: 10, langRestrict: language}
     )
     // console.log(result.items[0])
     // console.log(result.items.map((el) => el.searchInfo?.textSnippet))
