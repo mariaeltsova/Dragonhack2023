@@ -25,7 +25,7 @@
   </nav>
 </template>
 
-<style>
+<style scoped>
 .profile {
   width: 5rem;
   height: 5rem;
