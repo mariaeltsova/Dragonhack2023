@@ -9,5 +9,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/getSnippets', controller.getBook);
+router.get('/generateText', controller.generateText);
 
 module.exports = router;
