@@ -44,7 +44,7 @@ import TextArea from "../components/TextArea.vue"
   ></text-area>
 
   <br />
-  <button type="submit" class="btn btn-secondary float-end">Save words</button>
+  <button type="submit" class="btn btn-primary float-end">Save words</button>
 </template>
 
 <script>
