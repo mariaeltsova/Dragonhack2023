@@ -65,7 +65,7 @@ export default {
   methods: {
     async getQuestion() {
       const response = await axios.get(
-        `http://localhost:9000/api/generateText?word=${"rope"}&language=${"en"}`
+        `http://localhost:9000/api/generateText?word=${"rop"}&language=${"en"}`
       )
       console.log(response.data)
       this.question1 = response.data.example1[0]
