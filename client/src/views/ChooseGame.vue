@@ -1,6 +1,10 @@
 <template>
   <br />
-  <button type="button" class="btn btn-primary btn-lg btn-block" @click="">
+  <button
+    type="button"
+    class="btn btn-primary btn-lg btn-block"
+    @click="this.$router.push({ name: 'mistake' })"
+  >
     Correct a mistake
   </button>
   <br />
