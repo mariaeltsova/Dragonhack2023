@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --bs-white: #382161;
   --bs-blue: #a7d8de;
   --bs-indigo: #a7d8de;
   --bs-purple: #653780;
