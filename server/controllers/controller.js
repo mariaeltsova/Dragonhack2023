@@ -24,8 +24,18 @@ exports.getBook = async (req, res) => {
 
 exports.generateText = async (req, res) => {
   try{
-    const result = await gpt.generateText();
-    res.status(200).send(result.data.choices[0].message.content);
+    const result = await gpt.generateText("stopping", "english");
+    res.status(200).send(result);
+  }
+  catch(error){
+    res.status(500).json(error);
+  }
+}
+
+exports.card_transl_deepl = async (req, res) => {
+  try{
+    const result = await gpt.card_transl_deepl('части', 'выдели части в предложении', 'russian');
+    res.status(200).send(result);
   }
   catch(error){
     res.status(500).json(error);

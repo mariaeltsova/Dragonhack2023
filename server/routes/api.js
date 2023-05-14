@@ -10,5 +10,6 @@ router.get('/', (req, res) => {
 
 router.get('/getSnippets', controller.getBook);
 router.get('/generateText', controller.generateText);
+router.get('/cardTranslate', controller.card_transl_deepl);
 
 module.exports = router;
